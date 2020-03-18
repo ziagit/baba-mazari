@@ -1,0 +1,23 @@
+<ion-content>
+    <ion-card>
+        <div class="header">
+            <h4>زبان</h4>
+            <ion-button slot="end" fill="clear" (click)="close()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </div>
+        <ion-card-content>
+
+            <ion-segment (ionChange)="segmentChanged($event)" mode="ios" value="da">
+                <ion-segment-button value="da">
+                    <ion-label>دری</ion-label>
+                </ion-segment-button>
+                <ion-segment-button value="en" disabled="true">
+                    <ion-label>English</ion-label>
+                </ion-segment-button>
+            </ion-segment>
+
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

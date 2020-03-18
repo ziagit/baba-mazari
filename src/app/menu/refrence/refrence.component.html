@@ -1,0 +1,39 @@
+<ion-content>
+    <ion-card>
+
+        <div class="header">
+            <h4>منابع</h4>
+            <ion-button slot="end" fill="clear" (click)="close()">
+                <ion-icon name="close"></ion-icon>
+            </ion-button>
+        </div>
+
+        <ion-card-content>
+            <ion-grid>
+                <ion-row>
+                  <ion-col>
+                    شماره
+                  </ion-col>
+                  <ion-col>
+                    نام
+                  </ion-col>
+                  <ion-col>
+                    لینک
+                  </ion-col>
+                </ion-row>
+                <ion-row *ngFor="let refrence of refrences">
+                  <ion-col>
+                    {{refrence.id}}
+                  </ion-col>
+                  <ion-col>
+                    {{refrence.name}}
+                  </ion-col>
+                  <ion-col>
+                    <a href="{{refrence.link}}" target="_blank">{{refrence.link}}</a>
+                  </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card-content>
+    </ion-card>
+
+</ion-content>

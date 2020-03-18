@@ -1,0 +1,22 @@
+ion-card{
+    min-height: calc(100vh - 20px);
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4{
+            font-size: 18px;
+            margin: 18px;
+        }
+    }
+    ion-card-content{
+        display: flex;
+        justify-content: space-around;
+        .blue{
+            background: blue;
+        }
+        .gray{
+            background: gray;
+        }
+    }
+}

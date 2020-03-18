@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-card>
+    <div class="header">
+      <h4>{{book[0].name}}</h4>
+      <ion-button slot="end" fill="clear" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-card-content>
+      <img src="../../assets/images/{{book[0].image}}" alt="">
+      <h2>{{book[0].publisher}} - {{book[0].publishDate}} </h2>
+      <p>{{book[0].text}}</p>
+
+      <ion-icon name="share" (click)="share(book[0].title, book[0].details, book[0].file)"></ion-icon>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

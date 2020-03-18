@@ -1,0 +1,23 @@
+
+<ion-content>
+  <ion-card>
+    <div class="header">
+      <h4>زندگینامه {{biography[0].name}}</h4>
+      <ion-button slot="end" fill="clear" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </div>
+
+    <ion-card-content>
+      <div class="img-container">
+        <img src="../../assets/images/{{biography[0].image}}" alt="">
+
+      </div>
+      <h2>{{biography[0].name}}: </h2>
+      <p>{{biography[0].detail}}</p>
+
+      <ion-icon name="share" (click)="share(biography[0].name, biography[0].detail, biography[0].image)"></ion-icon>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

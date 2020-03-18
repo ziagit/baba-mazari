@@ -1,0 +1,35 @@
+
+ion-card{
+    min-height: calc(100vh - 77px);
+    .header{
+        display: flex;
+        justify-content: space-between;
+        h4{
+            font-size: 18px;
+            margin: 18px;
+        }
+    }
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        align-content: flex-start;
+        flex-wrap: wrap;
+        padding: 10px;
+        .element{
+            margin-bottom: 5px !important;
+            text-align: center;
+            width: 103px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            align-self: left;
+        }
+    }
+    ion-fab-button{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+

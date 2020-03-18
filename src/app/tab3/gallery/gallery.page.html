@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-card>
+
+    <div class="header">
+      <h4>عکسهای {{gallery.name}}</h4>
+      <ion-button slot="end" fill="clear" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </div>
+
+    <ion-card-content>
+      <div class="img-container" *ngFor="let gal of gallery">
+        <img src="../../assets/images/{{gal.file}}" alt="" (click)="view(gal.file)">
+        <div>
+          <span> {{gal.place}} </span> -
+          <span> {{gal.date}} </span>
+        </div>
+        <ion-icon name="share" (click)="share(gal.name, gal.place, gal.file)"></ion-icon>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

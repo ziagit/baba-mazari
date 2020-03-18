@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-card>
+    <div class="header">
+      <h4>{{event.title}}</h4>
+      <ion-button slot="end" fill="clear" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-card-content>
+      <img src="../../assets/images/{{event.file}}" alt="">
+      <h2>{{event.title}} - {{event.date}} </h2>
+      <p>{{event.details}}</p>
+
+      <ion-icon name="share" (click)="share(event.title, event.details, event.file)"></ion-icon>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

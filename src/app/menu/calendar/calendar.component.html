@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-card>
+    <div class="header">
+      <h4>تقویم</h4>
+      <ion-button slot="end" fill="clear" (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </div>
+    <ion-card-content>
+      <div class="ion-padding">
+
+        <ion-calendar [(ngModel)]="date"
+          (change)="onChange($event)"
+          [type]="type"
+          [format]="'YYYY-MM-DD'">
+        </ion-calendar>
+    
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

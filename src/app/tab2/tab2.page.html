@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+    <div class="header">
+      <h4>زندگی نامه مردان بزرک</h4>
+      <ion-button slot="end" fill="clear" (click)="openMenu($event)">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </div>
+
+    <ion-item *ngFor="let biography of biographies" (click)="openBiographyModal(biography.id)">
+      <ion-thumbnail slot="start" border-radius>
+        <img src="../../assets/images/{{biography.image}}" alt="" />
+      </ion-thumbnail>
+      <ion-label>
+        <h3>{{biography.name}}</h3>
+        <p>{{biography.detail}}</p>
+      </ion-label>
+      <ion-ripple-effect></ion-ripple-effect>
+    </ion-item>
+    <div class="no-item" *ngIf="!biographies.length">باعرض معزرت، این معلومات هنوز آماده نشده</div>
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" (click)="openTypeMenu($event)">
+      <ion-icon name="list"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

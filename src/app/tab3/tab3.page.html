@@ -1,0 +1,31 @@
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card>
+
+    <div class="header">
+      <h4>گالری</h4>
+      <ion-button slot="end" fill="clear" (click)="openMenu($event)">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </div>
+
+    <div class="content">
+      <div class="element" *ngFor="let gal of gallery" (click)="getGalleryById(gal.id)">
+        <img src="../../assets/images/{{gal.file}}" alt="" />
+        <ion-ripple-effect></ion-ripple-effect>
+      </div>
+
+      <div class="no-item" *ngIf="!gallery.length">باعرض معزرت، این معلومات هنوز آماده نشده</div>
+
+    </div>
+
+  </ion-card>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" (click)="openTypeMenu($event)">
+      <ion-icon name="list"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

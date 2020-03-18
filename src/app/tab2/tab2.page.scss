@@ -1,0 +1,19 @@
+ion-card{
+    min-height: calc(100vh - 77px);
+    .header{
+        display: flex;
+        justify-content: space-between;
+        h4{
+            font-size: 18px;
+            margin: 18px;
+        }
+    }
+    ion-fab-button{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+    .no-item{
+        margin: 10px;
+    }
+}
